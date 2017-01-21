@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <tempile/tempile.h>
+#include <regexlite/regexlite.h>
 
 class TestUsage : public ::testing::Test {
 

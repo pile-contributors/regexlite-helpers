@@ -3,7 +3,7 @@
 # Introduction
 # ------------
 # 
-# This file is the main file for the tempile-helpers. The project follows 
+# This file is the main file for the regexlite-helpers. The project follows 
 # the pattern laid out at http://pile-contributors.github.io/
 # for a `pile-helpers` repository.
 #
@@ -14,18 +14,18 @@
 # to use it as a model for your own piles or to improve and test this pile.
 #
 # The project has an optional dependency on Qt5 library. If found,
-# the tempile pile will use the definitions for shared libraries.
+# the regexlite pile will use the definitions for shared libraries.
 #
 # ============================================================================
 
-set (PROJECT_NAME "tempile-helpers")
+set (PROJECT_NAME "regexlite-helpers")
 
 project(${PROJECT_NAME})
 cmake_minimum_required(VERSION 2.8.11)
 enable_testing()
 
 option( INCLUDE_PILE_SOURCES_DIRECTLY
-        "Use internal tempile as a pile (ON) or as a library (OFF)"
+        "Use internal regexlite as a pile (ON) or as a library (OFF)"
         OFF)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -49,11 +49,11 @@ endif()
 
 if(INCLUDE_PILE_SOURCES_DIRECTLY)
     include(pile_support)
-    pileInclude (TemPile)
-    tempileInit(PILE)
+    pileInclude (regexlite)
+    regexliteInit(PILE)
 else()
-    set (TEMPILE_BUILD_MODE SHARED)
-    add_subdirectory(tempile)
+    set (regexlite_BUILD_MODE SHARED)
+    add_subdirectory(regexlite)
 endif()
 
 add_subdirectory(tests)
