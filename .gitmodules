@@ -1,0 +1,3 @@
+[submodule "regexlite"]
+	path = regexlite
+	url = git@github.com:pile-contributors/regexlite.git
