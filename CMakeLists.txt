@@ -2,14 +2,14 @@
 #
 # Introduction
 # ------------
-# 
-# This file is the main file for the regexlite-helpers. The project follows 
+#
+# This file is the main file for the regexlite-helpers. The project follows
 # the pattern laid out at http://pile-contributors.github.io/
 # for a `pile-helpers` repository.
 #
 # Usage
 # -----
-# 
+#
 # You can use the resources in this project to understand this pile,
 # to use it as a model for your own piles or to improve and test this pile.
 #
@@ -24,11 +24,14 @@ project(${PROJECT_NAME})
 cmake_minimum_required(VERSION 2.8.11)
 enable_testing()
 
+
 option( INCLUDE_PILE_SOURCES_DIRECTLY
         "Use internal regexlite as a pile (ON) or as a library (OFF)"
         OFF)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+SET(CMAKE_AUTOUIC ON)
 
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY
     "${PROJECT_BINARY_DIR}/build/bin" )
